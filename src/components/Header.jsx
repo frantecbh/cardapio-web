@@ -1,3 +1,5 @@
+import { MapPin } from 'lucide-react'
+
 export function Header() {
   return (
     <header className="w-full h-96 bg-zinc-900 bg-home bg-cover bg-center">
@@ -7,8 +9,11 @@ export function Header() {
           alt=""
           className="size-32 rounded-full shadow-lg hover:scale-110 duration-200"
         />
-        <h1 className="text-4xl text-slate-50 mt-4 font-bold">Dev Burger</h1>
-        <span className="text-slate-50 font-medium">
+        <h1 className="text-4xl text-slate-50 mt-4 font-bold my-2">
+          Dev Burger
+        </h1>
+        <span className="text-slate-50 font-medium text-xs flex items-center gap-1">
+          <MapPin size={12} />
           Rua Visconde de taunay, 0001 - Santa Monica / BH
         </span>
         <div className="bg-lime-700 px-4 py-1 rounded-lg mt-5" id="date-span">
