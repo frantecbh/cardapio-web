@@ -10,7 +10,7 @@ export function Header() {
           className="size-32 rounded-full shadow-lg hover:scale-110 duration-200"
         />
         <h1 className="text-4xl text-slate-50 mt-4 font-bold my-2">
-          Dev Burger
+          Frantec Burger
         </h1>
         <span className="text-slate-50 font-medium text-xs flex items-center gap-1">
           <MapPin size={12} />
