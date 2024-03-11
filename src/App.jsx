@@ -7,7 +7,7 @@ import { useState } from 'react'
 export default function App() {
   const [isModal, setIsModal] = useState(false)
   return (
-    <div className="h-screen w-full grid grid-rows-[384px_auto] ">
+    <div className="h-screen w-full grid grid-rows-[288px_auto] md:grid-rows-[384px_auto] ">
       <Header />
 
       <div className="mx-auto max-w-6xl overflow-y-scroll">
