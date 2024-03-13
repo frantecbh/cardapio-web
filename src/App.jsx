@@ -36,8 +36,9 @@ export default function App() {
 
       {/* modal */}
       {isModal && (
-        <div className="bg-black/60 w-full h-screen fixed top-0 left-0 z-[99] flex items-center justify-center">
-          <div className="bg-slate-100 p-5 rounded-md min-w-[90%] md:min-w-[600px]">
+        <div className="bg-black/60 w-full h-screen fixed inset-0 z-[99] flex items-center justify-center">
+          {/* <div className="bg-slate-100 p-5 rounded-md min-w-[90%] md:min-w-[600px]"> */}
+          <div className="fixed overflow-hidden inset-0 md:inset-auto md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 max-w-[640px] md:h-[60vh] w-full bg-slate-100 md:rounded-md flex flex-col outline-none">
             <h2 className="text-center font-bold text-2xl mb-2">
               Meu carrinho
             </h2>
