@@ -1,4 +1,4 @@
-import { ShoppingBag } from 'lucide-react'
+import { ShoppingBag, X } from 'lucide-react'
 import { Bebidas } from './components/Bebidas'
 import { Header } from './components/Header'
 import { Produto } from './components/Produto'
@@ -15,17 +15,22 @@ export default function App() {
           Conheça nosso cardápio
         </h2>
         <main>
-          <h2 className="font-bold text-xl mb-2 text-slate-700">Sanduwiches</h2>
-          {/* produtos */}
-          <div className="grid grid-cols-1 gap-7 md:gap-10 md:grid-cols-2 px-4 mb-16 md:px-0">
-            {Array.from([1, 2, 3, 4, 5, 6, 7, 8, 9]).map((item, i) => (
-              <Produto key={i} />
-            ))}
+          <div className="w-full px-4">
+            <h2 className="font-bold text-xl mb-2 text-slate-700">
+              Sanduwiches
+            </h2>
+            {/* produtos */}
+            <div className="grid grid-cols-1 gap-7 md:gap-10 md:grid-cols-2  mb-16 md:px-0">
+              {Array.from([1, 2, 3, 4, 5, 6, 7, 8, 9]).map((item, i) => (
+                <Produto key={i} />
+              ))}
+            </div>
           </div>
-          <div className="w-full">
+
+          <div className="w-full px-4">
             <h2 className="font-bold text-xl mb-2">Bebidas</h2>
             {/* bebidas */}
-            <div className="grid grid-cols-1 gap-7 md:gap-10 md:grid-cols-2 px-4 mb-16 md:px-0">
+            <div className="grid grid-cols-1 gap-7 md:gap-10 md:grid-cols-2  mb-16 md:px-0">
               {Array.from([1, 2, 3, 4, 5]).map((item, i) => (
                 <Bebidas key={i} />
               ))}
@@ -38,7 +43,17 @@ export default function App() {
       {isModal && (
         <div className="bg-black/60 w-full h-screen fixed inset-0 z-[99] flex items-center justify-center">
           {/* <div className="bg-slate-100 p-5 rounded-md min-w-[90%] md:min-w-[600px]"> */}
-          <div className="fixed overflow-hidden inset-0 md:inset-auto md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 max-w-[640px] md:h-[60vh] w-full bg-slate-100 md:rounded-md flex flex-col outline-none">
+
+          <div className="fixed overflow-hidden inset-0 md:inset-auto md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 max-w-[640px] md:h-[60vh] w-full bg-slate-100 md:rounded-md flex flex-col outline-none p-4">
+            <div className="flex justify-end my-1">
+              <button
+                className="hover:bg-red-500 rounded-full size-9 flex items-center justify-center duration-300"
+                onClick={() => setIsModal(false)}
+              >
+                <X />
+              </button>
+            </div>
+
             <h2 className="text-center font-bold text-2xl mb-2">
               Meu carrinho
             </h2>
@@ -57,13 +72,7 @@ export default function App() {
             <p className="text-red-500 text-xs mt-2">
               Digite seu endereço completo!
             </p>
-            <div className="flex justify-between pt-2">
-              <button
-                className="p-2 font-bold text-slate-600 rounded-md duration-300 border-2 hover:border-lime-700"
-                onClick={() => setIsModal(false)}
-              >
-                Fechar
-              </button>
+            <div className="flex justify-end pt-2">
               <button className="bg-lime-700 hover:bg-lime-800 p-2 text-slate-100 font-bold rounded-md duration-300">
                 Enviar Pedido
               </button>
